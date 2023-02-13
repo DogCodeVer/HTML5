@@ -7,15 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script>
+  function checkNull(){
+    let a=document.getElementById("text").value
+    let b=document.getElementById("text").value
+    let c=document.getElementById("text").value
+    let d=document.getElementById("text").value
+    let e=document.getElementById("text").value
+
+    if(a=="" || b=="" || c=="" || d=="" ||e==""){
+      alert("Не все поля заполнены")
+    }
+  }
+</script>
 <body>
     <div class="login-page">
         <div class="form">
           <form class="login-form">
-            <input type="text" placeholder="ФИО"/>
-            <input type="email" placeholder="Email"/>
-            <input type="tel" placeholder="Телефон"/>
-            <input type="date" placeholder="Дата рождения"/>
-            <button>Отправить</button>
+            <input type="text" id="text" placeholder="ФИО"/>
+            <input type="email" id="email" placeholder="Email"/>
+            <input type="tel" id="tel" placeholder="Телефон"/>
+            <input type="date" id="date" placeholder="Дата рождения"/>
+            <select id="edu">
+              <option selected value=0 disabled>Образование</option>
+              <option value=1>Основное общее (5—9 класс)</option>
+              <option value=1>Среднее общее (10 и 11 классы)</option>
+              <option value=1>Среднее профессиональное</option>
+              <option value=1>Бакалавриат</option>
+              <option value=1>Cпециалитет</option>
+              <option value=1>Магистаратура</option>
+             </select>
+            <button onclick="checkNull()">Отправить</button>
+            <a href="index.html">НАЗАД</a>
           </form>
         </div>
       </div>
